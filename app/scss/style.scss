@@ -1,0 +1,27 @@
+@import 'fonts';
+@import 'vars';
+@import 'reset';
+
+/* @import 'mixins';
+@import 'libs'; */
+@import 'global';
+
+body {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+}
+
+.container {
+    display: none;
+    width: 100px;
+    height: 10px;
+}
+
+.test {
+    position: absolute;
+    width: 10px;
+}
