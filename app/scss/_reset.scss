@@ -37,9 +37,7 @@ ul {
 }
 
 img {
-	display: block;
 	max-width: 100%;
-	object-fit: cover;
 }
 
 input,
@@ -47,15 +45,9 @@ button,
 textarea,
 select {
 	font: inherit;
+    color: inherit;
 }
 
-input,
-textarea,
-select,
-a,
-button {
-	outline: 0;
-}
 
 a {
 	color: inherit;
@@ -66,11 +58,15 @@ address {
 	font-style: normal;
 }
 
-button {
-	display: inline-block;
+button,
+input,
+textarea {
 	padding: 0;
-	font: inherit;
+    background-color: transparent;
 	border: 0;
-	cursor: pointer;
 	appearance: none;
+}
+
+button {
+    cursor: pointer;
 }
