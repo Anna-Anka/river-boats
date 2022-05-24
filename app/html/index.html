@@ -2,6 +2,12 @@
     "title" : "River Boats — интернет-магазин лодок | Главная страницы"
 })
 
-@include("./components/_header.html")
+@include("./components/_header.html", {
+    "class" : "header--big"
+})
 
+@include("./components/_footer.html",
+{
+    "class" : "footer--big"
+})
 @include("./components/_bottom.html")
