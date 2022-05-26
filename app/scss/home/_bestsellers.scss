@@ -1,0 +1,13 @@
+.bestsellers {
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+        gap: 12px;
+
+    }
+
+    &__item {
+        box-shadow: 0 0 4px 1px rgb($black 0.13);
+        
+    }
+}

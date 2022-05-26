@@ -1,0 +1,132 @@
+.product-card {
+    position: relative;
+    padding: 25px 18px;
+    font-size: 14px;
+    line-height: 1.2;
+    background-color: $white;
+
+    &__badge {
+        position: absolute;
+        top: 14px;
+        left: 17px;
+        display: inline-block;
+        padding: 6px 8px;
+        color: $black;
+        font-weight: $fw-700;
+        text-transform: uppercase;
+        background-color: $yellow-700;
+    }
+
+    &__img {
+        width: 100%;
+        height: 188px;
+        object-fit: cover;
+    }
+
+    &__figures,
+    &__title,
+    &__img {
+        margin-bottom: 10px;
+    }
+
+    &__figures,
+    &__rating,
+    &__buy {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__price,
+    &__title {
+        color: $dark-700;
+    }
+
+    &__price {
+        margin-right: 5px;
+        font-weight: $fw-700;
+        font-size: 20px;
+
+        &--old {
+            font-weight: $fw-400;
+            font-size: 15px;
+            text-decoration: line-through;
+        }
+    }
+
+    &__sale {
+        display: inline-block;
+        width: 59px;
+        height: 42px;
+        padding: 10px 0;
+        color: $white;
+        font-weight: $fw-500;
+        font-size: 16px;
+        text-align: center;
+        background-color: $red-500;
+        border-radius: 5px;
+    }
+
+    &__title {
+        font-size: 15px;
+    }
+
+    &__rating,
+    &__buy {
+        margin-bottom: 12px;
+    }
+
+    &__stars {
+        height: 24px;
+        overflow: hidden;
+    }
+
+    &__sales {
+        color: rgba($black, 0.37);
+    }
+
+    &__guarantee {
+        color: $blue-200;
+    }
+
+    &__button,
+    &__status {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            content: "";
+        }
+    }
+
+    &__button {
+        position: relative;
+        padding-left: 29px;
+        color: $red-500;
+
+        &::before {
+            top: -4px;
+            width: 20px;
+            height: 20px;
+            background-image: url('../img/icons/cart.svg');
+            filter: invert(63%) sepia(84%) saturate(5114%) hue-rotate(332deg) brightness(87%) contrast(89%);
+            @include background;
+        }
+    }
+
+    &__status {
+        position: relative;
+        padding-left: 8px;
+        color: $green-500;
+
+        &::before {
+            top: 50%;
+            width: 4px;
+            height: 4px;
+            background-color: $green-500;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

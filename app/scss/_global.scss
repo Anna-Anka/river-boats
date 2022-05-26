@@ -80,3 +80,41 @@ body {
         @include background;
     }
 }
+
+.section {
+    padding-bottom: 70px;
+}
+
+.title {
+    margin-bottom: 58px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    &__headding {
+        font-family: $russoone,
+        sans-serif;
+        font-size: 35px;
+        line-height: 1.3;
+        position: relative;
+        padding-right: 29px;
+        margin-right: 28px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            right: 0;
+            width: 1px;
+            background-color: $blue-250;
+        }
+
+        &__sub {
+            font-size: 15px;
+            font-family: $roboto, sans-serif;
+            font-weight: $fw-700;
+            color: $blue-250;
+        }
+    }
+}

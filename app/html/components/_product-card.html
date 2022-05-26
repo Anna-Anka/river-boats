@@ -1,0 +1,45 @@
+<article class="product-card">
+    <div class="product-card__top">
+        @if (context.badge === "true") {
+        <span class="product-card__badge">
+            @badge-txt
+        </span>
+        }
+        <img class="product-card__img" src="img/product/@img.jpg" alt="@alt" width="278" height="188" loading="lazy">
+        <div class="product-card__figures">
+            <span class="product-card__price">
+                @price p.
+            </span>
+            @if (context.discount === "true") {
+                <span class="product-card__price product-card__price--old">
+                    @old p.
+                </span>
+                <span class="product-card__sale">
+                    -@sale%
+                </span>
+            }
+        </div>
+        <h3 class="product-card__title">
+            <a class="product-card__link" href="#">
+                @title
+            </a>
+        </h3>
+    </div>
+    <div class="product-card__bottom">
+        <div class="product-card__rating">
+            <span class="product-card__stars" data-rateyo-num-stars="@rating" readonly="readonly"></span>
+            <span class="product-card__sales">@sales шт. продано</span>
+        </div>
+        <div class="product-card__buy">
+            <span class="product-card__guarantee">
+                Гарантия @guarantee
+            </span>
+            <button class="product-card__button" type="button">
+                В корзину
+            </button>
+        </div>
+        <span class="product-card__status product-card__status--available">
+            @status
+        </span>
+    </div>
+</article>
