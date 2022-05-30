@@ -48,6 +48,14 @@ body {
     font-size: 15px;
     font-weight: $fw-700;
     text-transform: uppercase;
+
+    &--red {
+        padding: 18px 40px;
+        font-size: 16px;
+        color: $white;
+        background-color: $red-500;
+        border-radius: 5px;
+    }
 }
 
 .sr-only {

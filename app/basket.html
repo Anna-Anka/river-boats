@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>River Boats — интернет-магазин лодок | Оформление заказа</title>
+    <title>River Boats — интернет-магазин лодок | Корзина</title>
 </head>
 
 <body>
@@ -220,13 +220,8 @@
                 </a>
             </li>
             <li class="breadcrums__item">
-                <a class="breadcrums__link" href="#">
-                    Корзина
-                </a>
-            </li>
-            <li class="breadcrums__item">
                 <span class="breadcrums__link">
-                    Оформление заявки
+                    Корзина
                 </span>
             </li>
         </ul>
@@ -235,153 +230,70 @@
 
 
 <main class="main">
+    <h1 class="sr-only">
+        Корзина
+    </h1>
+    <section class="basket section">
+    <h2 class="sr-only">Товары в корзине</h2>
     <div class="container container--big">
-        <h1 class="order__title">
-            Оформление заявки
-        </h1>
-        <div class="order section">
-            <section class="order__form">
-    <h2 class="sr-only">
-        Оформление заказа
-    </h2>
-    <form class="form" action="#">
-        <div class="form__info">
-            <div class="form__item">
-                <label class="sr-only" for="form__name">
-                    Введите ваше ФИО
-                </label>
-                <input class="form__field" id="form__name" type="text" name="name" placeholder="ФИО" required>
-            </div>
-            <div class="form__item">
-                <label class="sr-only" for="form__tel">
-                    Введите cвой номер телефона
-                </label>
-                <input class="form__field" id="form__tel" type="tel" name="tel" placeholder="Контактный телефон" required>
-            </div>
-            <div class="form__item">
-                <label class="sr-only" for="form__email">
-                    Введите cвой E-mail
-                </label>
-                <input class="form__field" id="form__email" type="email" name="email" placeholder="E-mail" required>
-            </div>
-            <div class="form__item">
-                <label class="sr-only" for="form__address">
-                    Введите cвой адрес доставки
-                </label>
-                <input class="form__field" id="form__address" type="text" name="address" placeholder="Адрес доставки" required>
-            </div>
-        </div>
-
-        <div class="form__ways">
-            <h3 class="form__title">
-                Способы оплаты
-            </h3>
-            <div class="form__items">
-
-                <label class="form__pay">
-                    <input class="form__visible" type="radio" name="pay__receipt">
-                    <span class="form__choice form__choice--receipt">
-                        При получении
-                    </span>
-                </label>
-
-                <label class="form__pay">
-                    <input class="form__visible" type="radio" name="pay__card">
-                    <span class="form__choice form__choice--card">
-                        Онлайн картой
-                    </span>
-                </label>
-
-                <label class="form__pay">
-                    <input class="form__visible" type="radio" name="pay__check">
-                    <span class="form__choice form__choice--check">
-                        Выставление счета
-                    </span>
-                </label>
-
+        <div class="basket__wrapper">
+            <ul class="basket__items">
+                <li class="basket__item">
+                    
+                </li>
+            </ul>
+            <div class="basket__bottom">
+                <ul class="advantages">
+                    <li class="advantages__item advantages__item--delivery">
+                        <span class="advantages__name">
+                            Быстрая доставка
+                        </span>
+                        <div class="advantages__text">
+                            <p>
+                                Быстрая бесплатная доставка по России от 3 дн
+                            </p>
+                        </div>
+                    </li>
+                    <li class="advantages__item advantages__item--pay">
+                        <span class="advantages__name">
+                            Быстрая оплата
+                        </span>
+                        <div class="advantages__text">
+                            <p>
+                                Мы используем защиту на все платежей
+                            </p>
+                        </div>
+                    </li>
+                    <li class="advantages__item advantages__item--guarantee">
+                        <span class="advantages__name">
+                            Гарантия
+                        </span>
+                        <div class="advantages__text">
+                            <p>
+                                На все товары фирменная гарантия от производителя
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="basket__finish">
+                    <div class="basket__content">
+                        <h3 class="basket__title">
+                            Итого:
+                        </h3>
+                        <div class="basket__right">
+                            <span class="basket__price">
+                                26 040 р.
+                            </span>
+                            <a class="basket__btn button button--red" href="#">
+                                Оформить заявку
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <button class="form__btn button button--red" type="submit">
-            оформить заявку
-        </button>
-    </form>
-</section>
-            <section class="order__compound compound">
-    <h2 class="compound__title">
-        Состав заказа
-    </h2>
-    <ul class="compound__items">
-        <li class="compound__item">
-            
-
-
-
-
-    <article class="product-card product-card--small">
-        <img class="product-card__img" src="img/product/1.jpg" alt="RiverBoats RB — 300 (Киль)" width="93" height="67" loading="lazy">
-        <div class="product-card__right">
-            <h3 class="product-card__title">
-                <a class="product-card__link" href="#">
-                    RiverBoats RB — 300 (Киль)
-                </a>
-            </h3>
-            <div class="product-card__info">
-                <span class="product-card__price">
-                    35 568 р
-                </span>
-                <span class="product-card__count">
-                    2 шт.
-                </span>
-            </div>
-        </div>
-    </article>
-
-
-        </li>
-        <li class="compound__item">
-            
-
-
-
-
-    <article class="product-card product-card--small">
-        <img class="product-card__img" src="img/product/1.jpg" alt="RiverBoats RB — 300 (Киль)" width="93" height="67" loading="lazy">
-        <div class="product-card__right">
-            <h3 class="product-card__title">
-                <a class="product-card__link" href="#">
-                    RiverBoats RB — 300 (Киль) 
-                </a>
-            </h3>
-            <div class="product-card__info">
-                <span class="product-card__price">
-                    35 568 р
-                </span>
-                <span class="product-card__count">
-                    2 шт.
-                </span>
-            </div>
-        </div>
-    </article>
-
-
-        </li>
-    </ul>
-    <a class="compound__link" href="#">
-        Изменить заказ
-    </a>
-
-    <div class="compound__finish">
-        <h3 class="compound__subtitle">
-            Итого
-        </h3>
-        <span class="compound__summa">
-            75 266 р.
-        </span>
     </div>
 </section>
-        </div>
-    </div>
 </main>
 
 <footer class="footer footer">
@@ -552,4 +464,3 @@
  </body>
 
  </html>
-

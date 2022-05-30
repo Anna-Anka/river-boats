@@ -43,24 +43,15 @@
         }
     }
 
-    &__title,
     &__btn {
-        font-weight: $fw-500;
         text-transform: uppercase;
-        line-height: 1.2;
     }
 
     &__title {
         font-size: 18px;
+        font-weight: $fw-500;
         margin-bottom: 30px;
-    }
-
-    &__btn {
-        padding: 18px 40px;
-        font-size: 16px;
-        color: $white;
-        background-color: $red-500;
-        border-radius: 5px;
+        line-height: 1.2;
     }
 
     &__items {
