@@ -2,6 +2,16 @@
     display: flex;
 
     &__title {
-        
+        margin-bottom: 33px;
+        font-weight: $fw-400;
+        font-size: 32px;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+
+    &__form {
+        width: 100%;
+        max-width: 648px;
+        margin-right: 41px;
     }
 }

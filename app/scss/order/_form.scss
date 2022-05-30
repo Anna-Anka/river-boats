@@ -1,15 +1,131 @@
 .form {
-    padding-right: 33px;
     position: relative;
-    margin-right: 41px;
+    width: 100%;
+    padding-right: 33px;
+    height: 100%;
 
     &::before {
         position: absolute;
-        content: "";
         top: 0;
-        height: 100%;
         right: 0;
         width: 1px;
+        height: 100%;
         background-color: rgba($dark-600, 0.29);
+        content: "";
+    }
+
+    &__info {
+        margin-bottom: 30px;
+        max-width: 340px;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
+    }
+
+    &__choice,
+    &__field {
+        background-color: $white;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    &__field {
+        width: 100%;
+        padding: 18px 30px;
+        color: $black;
+        border: 1px solid $gray-100;
+
+        &::placeholder {
+            opacity: 0.5;
+        }
+    }
+
+    &__title,
+    &__btn {
+        font-weight: $fw-500;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+
+    &__title {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        padding: 18px 40px;
+        font-size: 16px;
+        color: $white;
+        background-color: $red-500;
+        border-radius: 5px;
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__pay {
+        display: inline-grid;
+        margin-bottom: 50px;
+
+        &:not(:last-child) {
+            margin-right: 11px;
+        }
+    }
+
+    &__choice {
+        padding: 16px 16px 16px 37px;
+        position: relative;
+        border: 1px solid transparent;
+        transition: border-color 0.3s, color 0.3s;
+
+        &::before {
+            position: absolute;
+            content: "";
+            @include background;
+            width: 22px;
+            height: 22px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+        }
+
+        &--receipt {
+            &::before {
+                background-image: url('../img/icons/receipt.svg');
+            }
+        }
+
+        &--card {
+            &::before {
+                background-image: url('../img/icons/card.svg');
+            }
+        }
+
+        &--check {
+            &::before {
+                background-image: url('../img/icons/check.svg');
+            }
+        }
+    }
+
+    &__visible {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        position: absolute;
+
+        &:checked {
+            &+.form__choice {
+                border-color: $brown-600;
+                color: $brown-700;
+                font-weight: $fw-700;
+
+            }
+        }
     }
 }
