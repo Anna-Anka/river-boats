@@ -1,0 +1,17 @@
+.category {
+    display: flex;
+    margin-bottom: 43px;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 14px;
+        }
+    }
+
+    &__btn {
+        padding: 12px 40px;
+        font-size: 15px;
+        background-color: $blue-50;
+        border-radius: 5px;
+    }
+}

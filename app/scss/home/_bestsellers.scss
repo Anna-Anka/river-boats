@@ -1,4 +1,6 @@
-.bestsellers {
+.bestsellers,
+.recommend,
+.catalog {
     &__items {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
@@ -8,5 +10,14 @@
 
     &__item {
         box-shadow: 0 0 4px 1px rgba($black, 0.13);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}
+
+.recommend {
+    &__items {
+        margin-bottom: 62px;
     }
 }

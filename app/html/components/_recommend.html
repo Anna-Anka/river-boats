@@ -1,0 +1,51 @@
+<section class="recommend section">
+    <div class="container container--big">
+        <div class="title">
+            <h2 class="title__headding">
+                Рекомендуем
+            </h2>
+            <span class="title__sub">
+                Аксессуары для лодок
+            </span>
+        </div>
+
+        <ul class="recommend__items">
+            <li class="recommend__item">
+                @include("../components/_product-card.html", {
+                    "section" : "recommend",
+                    "img" : "1",
+                    "alt" : "Тенты/Чехлы/Накладки/Коврики/Сумки",
+                    "title" : "Тенты/Чехлы/Накладки/Коврики/Сумки"
+                })
+            </li>
+            <li class="recommend__item">
+                @include("../components/_product-card.html", {
+                "section" : "recommend",
+                "img" : "1",
+                "alt" : "Спасательные жилеты",
+                "title" : "Спасательные жилеты"
+                })
+            </li>
+            <li class="recommend__item">
+                @include("../components/_product-card.html", {
+                "section" : "recommend",
+                "img" : "1",
+                "alt" : "Насосы/Якоря/Весла",
+                "title" : "Насосы/Якоря/Весла"
+                })
+            </li>
+            <li class="recommend__item">
+                @include("../components/_product-card.html", {
+                "section" : "recommend",
+                "img" : "1",
+                "alt" : "Фурнитура для лодок ПВХ",
+                "title" : "Фурнитура для лодок ПВХ"
+                })
+            </li>
+        </ul>
+
+        <button class="recommend__button button" type="button">
+            Смотреть все
+        </button>
+    </div>
+</section>

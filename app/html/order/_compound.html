@@ -1,0 +1,39 @@
+<section class="order__compound compound">
+    <h2 class="compound__title">
+        Состав заказа
+    </h2>
+    <ul class="compound__items">
+        <li class="compound__item">
+            @include("../components/_product-card.html", {
+                "section" : "order",
+                "img" : "1",
+                "alt" : "RiverBoats RB — 300 (Киль)",
+                "title" : "RiverBoats RB — 300 (Киль)",
+                "price" : "35 568",
+                "count" : "2"
+            })
+        </li>
+        <li class="compound__item">
+            @include("../components/_product-card.html", {
+            "section" : "order",
+            "img" : "1",
+            "alt" : "RiverBoats RB — 300 (Киль)",
+            "title" : "RiverBoats RB — 300 (Киль) ",
+            "price" : "35 568",
+            "count" : "2"
+            })
+        </li>
+    </ul>
+    <a class="compound__link" href="#">
+        Изменить заказ
+    </a>
+
+    <div class="compound__finish">
+        <h3 class="compound__subtitle">
+            Итого
+        </h3>
+        <span class="compound__summa">
+            75 266 р.
+        </span>
+    </div>
+</section>

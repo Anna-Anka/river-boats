@@ -1,0 +1,49 @@
+.compound {
+    max-width: 382px;
+
+    &__title {
+        margin-bottom: 52px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-weight: $fw-500;
+        font-size: 18px;
+    }
+
+    &__items,
+    &__link {
+        margin-bottom: 23px;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 23px;
+        }
+    }
+
+    &__link {
+        color: $red-500;
+        font-size: 13px;
+        display: inline-block;
+    }
+
+    &__finish {
+        padding: 26px 20px;
+        background-color: rgba($blue-40, 0.54);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: $fw-700;
+    }
+
+    &__subtitle {
+        margin-right: 10px;
+        color: $black;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    &__summa {
+        line-height: 1;
+        font-size: 30px;
+    }
+}

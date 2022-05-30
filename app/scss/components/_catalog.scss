@@ -1,0 +1,5 @@
+.catalog {
+    &__items {
+        grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+    }
+}

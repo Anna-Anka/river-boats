@@ -9,11 +9,15 @@ body {
 }
 
 .container {
-	max-width: 1326px;
+	max-width: 1233px;
 	margin: 0 auto;
 	padding: 0 15px;
 
     &--big {
+        max-width: 1326px;
+    }
+
+    &--huge {
         max-width: 1480px;
     }
 }
@@ -37,6 +41,13 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+    padding: 18px 61px;
+    color: $orange-20;
+    background-color: $blue-400;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: $fw-700;
+    text-transform: uppercase;
 }
 
 .sr-only {
@@ -109,12 +120,12 @@ body {
             width: 1px;
             background-color: $blue-250;
         }
+    }
 
-        &__sub {
-            font-size: 15px;
-            font-family: $roboto, sans-serif;
-            font-weight: $fw-700;
-            color: $blue-250;
-        }
+    &__sub {
+        font-size: 15px;
+        font-family: $roboto, sans-serif;
+        font-weight: $fw-700;
+        color: $blue-250;
     }
 }

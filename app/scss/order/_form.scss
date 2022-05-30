@@ -1,0 +1,15 @@
+.form {
+    padding-right: 33px;
+    position: relative;
+    margin-right: 41px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        height: 100%;
+        right: 0;
+        width: 1px;
+        background-color: rgba($dark-600, 0.29);
+    }
+}

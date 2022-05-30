@@ -3,16 +3,33 @@
 @import 'reset';
 
 @import 'mixins';
-/* @import 'libs'; */
+
+@import 'libs'; 
 @import 'global';
 
 //Components
 @import 'components/header';
 @import 'components/footer';
 @import 'components/product-card';
+@import 'components/category';
+@import 'components/breadcrums';
+@import 'components/reviews';
+@import 'components/catalog';
+@import 'components/youtube';
 
 //Home
 @import 'home/offer';
 @import 'home/bestsellers';
 @import 'home/about';
-@import 'home/mini-catalog'
+@import 'home/mini-catalog';
+@import 'home/gallery';
+@import 'home/factory';
+@import 'home/statistics';
+
+//Product
+@import 'product/product';
+
+//Order
+@import 'order/compound';
+@import 'order/form';
+

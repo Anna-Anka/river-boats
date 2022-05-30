@@ -1,4 +1,4 @@
-<section class="mini-catalog section">
+<section class="catalog section">
     <div class="container container--big">
         <div class="title">
             <h2 class="title__headding">
@@ -8,108 +8,107 @@
                 Для твоего отдыха
             </span>
         </div>
-        <ul class="category">
-            <li class="category__item">
-                <button class="category__btn mixitup-control-active" data-filter=".category-a" type="button">
-                    C НДНД
-                </button>
+
+        @if (context.catalog === "full") {
+            <ul class="category">
+                <li class="category__item">
+                    <button class="category__btn mixitup-control-active" data-filter=".category-a" type="button">
+                        C НДНД
+                    </button>
+                </li>
+                <li class="category__item">
+                    <button class="category__btn" data-filter=".category-b" type="button">
+                        С плоским дном
+                    </button>
+                </li>
+                <li class="category__item">
+                    <button class="category__btn" data-filter=".category-c" type="button">
+                        С жестким дном
+                    </button>
+                </li>
+                <li class="category__item">
+                    <button class="category__btn" data-filter=".category-d" type="button">
+                        С алюминиевым дном
+                    </button>
+                </li>
+                <li class="category__item">
+                    <button class="category__btn" data-filter=".category-e" type="button">
+                        Лодки с фальшбортами
+                    </button>
+                </li>
+                <li class="category__item">
+                    <button class="category__btn" data-filter=".category-f" type="button">
+                        Лодки РИБ
+                    </button>
+                </li>
+            </ul>
+        }
+
+        <ul class="catalog__items">
+            <li class="catalog__item mix category-a">
+                @include("../components/_product-card.html", {
+                "simple" : "false",
+                "img" : "1",
+                "alt" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
+                "title" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
+                "price" : "31 290",
+                "discount" : "true",
+                "old" : "44 700",
+                "sale" : "30",
+                "rating" : "4",
+                "sales" : "150",
+                "guarantee" : "2 года",
+                "status" : "в наличии",
+                })
             </li>
-            <li class="category__item">
-                <button class="category__btn" data-filter=".category-b" type="button">
-                    С плоским дном
-                </button>
+            <li class="catalog__item mix category-b">
+                @include("../components/_product-card.html", {
+                "simple" : "false",
+                "img" : "1",
+                "alt" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
+                "title" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
+                "price" : "31 290",
+                "discount" : "true",
+                "old" : "44 700",
+                "sale" : "30",
+                "rating" : "4",
+                "sales" : "150",
+                "guarantee" : "2 года",
+                "status" : "в наличии",
+                })
             </li>
-            <li class="category__item">
-                <button class="category__btn" data-filter=".category-c" type="button">
-                    С жестким дном
-                </button>
+            <li class="catalog__item mix category-c">
+                @include("../components/_product-card.html", {
+                "simple" : "false",
+                "img" : "1",
+                "alt" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
+                "title" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
+                "price" : "31 290",
+                "discount" : "true",
+                "old" : "44 700",
+                "sale" : "30",
+                "rating" : "4",
+                "sales" : "150",
+                "guarantee" : "2 года",
+                "status" : "в наличии",
+                })
             </li>
-            <li class="category__item">
-                <button class="category__btn" data-filter=".category-d" type="button">
-                    С алюминиевым дном
-                </button>
-            </li>
-            <li class="category__item">
-                <button class="category__btn" data-filter=".category-e" type="button">
-                    Лодки с фальшбортами
-                </button>
-            </li>
-            <li class="category__item">
-                <button class="category__btn" data-filter=".category-f" type="button">
-                    Лодки РИБ
-                </button>
+            <li class="catalog__item mix category-a">
+                @include("../components/_product-card.html", {
+                "simple" : "false",
+                "img" : "1",
+                "alt" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
+                "title" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
+                "price" : "31 290",
+                "discount" : "true",
+                "old" : "44 700",
+                "sale" : "30",
+                "rating" : "4",
+                "sales" : "150",
+                "guarantee" : "2 года",
+                "status" : "в наличии",
+                })
             </li>
         </ul>
-
-        <ul class="mini-catalog__items">
-            <li class="mini-catalog__item mix category-a">
-                @include("../components/_product-card.html", {
-                "section" : "catalog",
-                "img" : "1",
-                "alt" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
-                "title" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
-                "price" : "31 290",
-                "discount" : "true",
-                "old" : "44 700",
-                "sale" : "30",
-                "rating" : "4",
-                "sales" : "150",
-                "guarantee" : "2 года",
-                "status" : "в наличии",
-                })
-            </li>
-            <li class="mini-catalog__item mix category-b">
-                @include("../components/_product-card.html", {
-                "section" : "catalog",
-                "img" : "1",
-                "alt" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
-                "title" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
-                "price" : "31 290",
-                "discount" : "true",
-                "old" : "44 700",
-                "sale" : "30",
-                "rating" : "4",
-                "sales" : "150",
-                "guarantee" : "2 года",
-                "status" : "в наличии",
-                })
-            </li>
-            <li class="mini-catalog__item mix category-c">
-                @include("../components/_product-card.html", {
-                "section" : "catalog",
-                "img" : "1",
-                "alt" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
-                "title" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
-                "price" : "31 290",
-                "discount" : "true",
-                "old" : "44 700",
-                "sale" : "30",
-                "rating" : "4",
-                "sales" : "150",
-                "guarantee" : "2 года",
-                "status" : "в наличии",
-                })
-            </li>
-            <li class="mini-catalog__item mix category-a">
-                @include("../components/_product-card.html", {
-                "section" : "catalog",
-                "img" : "1",
-                "alt" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
-                "title" : "RiverBoats RB — 300 (НДНД) ЛАЙТ",
-                "price" : "31 290",
-                "discount" : "true",
-                "old" : "44 700",
-                "sale" : "30",
-                "rating" : "4",
-                "sales" : "150",
-                "guarantee" : "2 года",
-                "status" : "в наличии",
-                })
-            </li>
-        </ul>
-
-        <button class="mini-catalog__button button" type="button">
-            Смотреть больше лодок
-        </button>
     </div>
 </section>

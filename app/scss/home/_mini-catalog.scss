@@ -1,20 +1,25 @@
 .mini-catalog {
 
-}
-
-.filters {
-    display: flex;
-
     &__items {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        box-shadow: 0 0 4px 1px rgba($black, 0.13);
+
         &:not(:last-child) {
-            margin-right: 14px;
+            margin-right: 12px;
         }
     }
 
-    &__btn {
-        padding: 12px 40px;
-        font-size: 15px;
-        background-color: $blue-50;
-        border-radius: 5px;
+    &__button {
+        margin: 0 auto;
+    }
+
+    .mixitup-control-active {
+        color: $white;
+        background-color: $blue-400;
     }
 }
+

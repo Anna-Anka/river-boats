@@ -1,0 +1,51 @@
+.breadcrums {
+    margin-bottom: 50px;
+    padding-top: 50px;
+    
+    &__items {
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            position: relative;
+            padding-right: 25px;
+            margin-right: 8px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                width: 17px;
+                height: 1px;
+                background-color: $blue-250;
+            }
+        }
+    }
+
+    &__link {
+        &--home {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 20px;
+                top: 0;
+                left: 0;
+                @include background;
+                background-image: url('../img/icons/home.svg');
+            }
+        }
+    }
+}

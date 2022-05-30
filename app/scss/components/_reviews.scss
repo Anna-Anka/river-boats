@@ -1,0 +1,106 @@
+.reviews {
+    position: relative;
+    padding-bottom: 101px;
+    margin-bottom: 70px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img,
+    &__bg {
+        width: 100%;
+        background-size: cover;
+        @include background;
+    }
+
+    &__img {
+        max-width: 675px;
+        height: 411px;
+        margin-right: 10px;
+    }
+
+    &__items {
+        margin-right: 44px;
+        margin-left: auto;
+        z-index: 10;
+        max-width: 587px;
+        width: 100%;
+    }
+
+    &__item {
+        max-width: 587px;
+    }
+
+    &__text {
+        padding: 68px 45px 68px 56px;
+        background-color: $yellow-100;
+        margin-bottom: 15px;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__author {
+        font-size: 15px;
+        color: $brown-600;
+        font-style: normal;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 329px;
+        height: 100%;
+        box-shadow: 0 0 81px rgba($black, 0.16);
+
+
+        &::before {
+            @include pseudo-bg;
+            background-color: $blue-200;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+
+        li {
+            font-size: 0;
+            &:not(:last-child) {
+                margin-right: 11px;
+                padding-right: 28px;
+                position: relative;
+                display: inline-block;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 17px;
+                    height: 1px;
+                    background-color: rgba($dark-600, 0.29);
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        button {
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            border: 1px solid $blue-400;
+        }
+
+        .slick-active {
+            button {
+                background-color: $blue-400;
+            }
+        }
+    }
+}

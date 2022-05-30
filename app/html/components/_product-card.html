@@ -1,3 +1,4 @@
+@if (context.section === "catalog") {
 <article class="product-card">
     <div class="product-card__top">
         @if (context.badge === "true") {
@@ -43,3 +44,41 @@
         </span>
     </div>
 </article>
+}
+
+@if (context.section === "recommend") {
+    <article class="product-card">
+        <div class="product-card__content">
+            <img class="product-card__img" src="img/product/@img.jpg" alt="@alt" width="278" height="188" loading="lazy">
+            <h3 class="product-card__title">
+                <a class="product-card__link" href="#">
+                    @title
+                </a>
+            </h3>
+        </div>
+        <a class="product-card__more" href="#">
+            Подробнее
+        </a>
+    </article>
+}
+
+@if (context.section === "order") {
+    <article class="product-card product-card--small">
+        <img class="product-card__img" src="img/product/@img.jpg" alt="@alt" width="93" height="67" loading="lazy">
+        <div class="product-card__right">
+            <h3 class="product-card__title">
+                <a class="product-card__link" href="#">
+                    @title
+                </a>
+            </h3>
+            <div class="product-card__info">
+                <span class="product-card__price">
+                    @price р
+                </span>
+                <span class="product-card__count">
+                    @count шт.
+                </span>
+            </div>
+        </div>
+    </article>
+}

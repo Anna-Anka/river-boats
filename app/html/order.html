@@ -1,0 +1,51 @@
+@include("./components/_head.html", {
+"title" : "River Boats — интернет-магазин лодок | Оформление заказа"
+})
+
+@include("./components/_header.html", {
+"class" : "header"
+})
+
+<div class="breadcrums">
+    <div class="container container--big">
+        <ul class="breadcrums__items">
+            <li class="breadcrums__item">
+                <a class="breadcrums__link breadcrums__link--home" href="#">
+                    <span class="sr-only">
+                        Главная
+                    </span>
+                </a>
+            </li>
+            <li class="breadcrums__item">
+                <a class="breadcrums__link" href="#">
+                    Корзина
+                </a>
+            </li>
+            <li class="breadcrums__item">
+                <span class="breadcrums__link">
+                    Оформление заявки
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<main class="main">
+    <div class="container container--big">
+        <h1 class="order__title">
+            Оформление заявки
+        </h1>
+        <div class="order">
+            @include("./order/_form.html")
+            @include("./order/_compound.html")
+        </div>
+    </div>
+</main>
+
+@include("./components/_footer.html",
+{
+"class" : "footer"
+})
+@include("./components/_bottom.html")
+
