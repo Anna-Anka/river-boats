@@ -4,13 +4,25 @@
         <div class="basket__wrapper">
             <ul class="basket__items">
                 <li class="basket__item">
-                    <!-- @include("../components/_product-card.html", {
+                    @include("../components/_product-card.html", {
                         "section" : "basket",
                         "img" : "1",
+                        "discount" : "true",
                         "alt" : "RiverBoats RB — 300 (Киль)",
                         "title" : "RiverBoats RB — 300 (Киль)",
                         "price" : "26 040",
-                    }) -->
+                        "old" : "26 040",
+                        "sale" : "30",
+                    })
+                </li>
+                <li class="basket__item">
+                    @include("../components/_product-card.html", {
+                    "section" : "basket",
+                    "img" : "1",
+                    "alt" : "RiverBoats RB — 300 (Киль)",
+                    "title" : "RiverBoats RB — 300 (Киль)",
+                    "price" : "26 040",
+                    })
                 </li>
             </ul>
             <div class="basket__bottom">

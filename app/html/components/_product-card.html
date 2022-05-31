@@ -82,3 +82,47 @@
         </div>
     </article>
 }
+
+@if (context.section === "basket") {
+    <article class="product-card product-card--basket">
+        <div class="product-card__left">
+            <img class="product-card__img" src="img/product/@img.jpg" alt="@alt" width="151" height="109" loading="lazy">
+            <div class="product-card__content">
+                <h3 class="product-card__title">
+                    <a class="product-card__link" href="#">
+                        @title
+                    </a>
+                </h3>
+                <div class="product-card__figures">
+                    @if (context.discount === "true") {
+                    <span class="product-card__sale">
+                        -@sale%
+                    </span>
+                    <span class="product-card__price product-card__price--old">
+                        @old p.
+                    </span>
+                    }
+                    <span class="product-card__price">
+                        @price p.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="product-card__right">
+            <form class="product-card__form" action="#">
+                <label class="sr-only" for="product-card__num">
+                    Количество товара
+                </label>
+                <input class="product-card__number" type="number" id="product-card__num" name="count" value="1" min="1">
+            </form>
+            <span class="product-card__price product-card__price--finish">
+                @price p.
+            </span>
+            <button class="product-card__btn" type="button">
+                <span class="sr-only">
+                    Удалить из корзины
+                </span>
+            </button>
+        </div>
+    </article>
+}

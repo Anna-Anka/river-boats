@@ -38,6 +38,9 @@ $(function () {
         focusOnSelect: true
     });
 
+    //Количество товара
+    $('.product-card__number').styler();
+
 
     //Счетчик
     function getTimeRemaining(endtime) {
