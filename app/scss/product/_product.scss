@@ -8,4 +8,138 @@
         max-width: 510px;
         margin-right: 10px;
     }
+
+    &__list {
+        position: relative;
+
+        .slick-slide {
+            padding: 0 7px;
+        }
+    }
+
+    &__images,
+    &__img {
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    &__images {
+        max-width: 493px;
+        height: 312px;
+    }
+
+    &__img {
+      width: 97px;
+      height: 66px;
+    }
+
+    &__thumb {
+        .slick-slide {
+            margin-right: 5px;
+        }
+
+        .slick-track {
+            display: flex;
+            align-items: center;
+        }
+
+        .slick-current {
+            .product__img {
+                width: 126px;
+                height: 80px;
+                border: 1px solid $blue-400;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 11px;
+        color: $brown-700;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        width: 32px;
+        height: 32px;
+        transform: translateY(-50%);
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 17px;
+            height: 32px;
+            transform: translateX(-50%);
+            content: "";
+            @include background;
+        }
+
+        &--prev {
+            left: -50px;
+
+            &::before {
+                background-image: url('../img/icons/arrow-left.svg');
+            }
+        }
+
+        &--next {
+            right: -50px;
+
+            &::before {
+                background-image: url('../img/icons/arrow-right.svg');
+            }
+        }
+    }
+
+    &__icon {
+        width: 17px;
+        height: 32px;
+
+    }
+}
+
+.product-options {
+    margin-bottom: 11px;
+
+    &__title {
+        margin-bottom: 22px;
+        color: $dark-700;
+        font-weight: $fw-400;
+        font-size: 15px;
+        letter-spacing: 0.04em;
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__visual {
+        height: 34px;
+        width: 34px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        display: inline-block;
+    }
+
+    &__unvisible {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        position: absolute;
+
+        &:checked {
+            &+.product-options__visual {
+                border-color: rgba($white, 0.55);
+            }
+        }
+    }
 }

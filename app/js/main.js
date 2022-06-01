@@ -24,18 +24,21 @@ $(function () {
     });
 
     //Слайдер на странице товара
-    $('.product__big').slick({
+    $('.product__list').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
-        asNavFor: '.product__items'
+        asNavFor: '.product__thumb',
+        prevArrow: '<button class="product__arrow product__arrow--prev"></button>',
+        nextArrow: '<button class="product__arrow product__arrow--next"></button>',
     });
-    $('.product__items').slick({
+    $('.product__thumb').slick({
         slidesToShow: 4,
         slidesToScroll: 4,
-        asNavFor: '.product__big',
+        asNavFor: '.product__list',
         centerMode: true,
-        focusOnSelect: true
+        focusOnSelect: true,
+        arrows: false,
     });
 
     //Количество товара
