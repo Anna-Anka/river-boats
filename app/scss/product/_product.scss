@@ -116,6 +116,7 @@
     &__image {
         width: 100%;
         @include background;
+
         background-size: cover;
     }
 
@@ -129,17 +130,17 @@
 
         &::before {
             position: absolute;
-            content: "";
             width: 100%;
             height: 100%;
             background-color: $blue-200;
+            content: "";
         }
     }
 
     &__image {
-        height: 452px;
-        max-width: 569px;
         z-index: 5;
+        max-width: 569px;
+        height: 452px;
     }
 }
 
@@ -345,9 +346,9 @@
     }
 
     &__content {
+        display: none;
         color: $brown-700;
         font-size: 13px;
-        display: none;
 
         &--active {
             display: block;
