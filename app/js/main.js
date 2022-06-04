@@ -45,13 +45,13 @@ $(function () {
     $('.product-card__number').styler();
 
 
-    //Счетчик
+    //Счетчик на главной
     function getTimeRemaining(endtime) {
-        const total = Date.parse(endtime) - Date.parse(new Date());
-        const seconds = Math.floor((total / 1000) % 60);
-        const minutes = Math.floor((total / 1000 / 60) % 60);
-        const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-        const days = Math.floor(total / (1000 * 60 * 60 * 24));
+        let total = Date.parse(endtime) - Date.parse(new Date());
+        let seconds = Math.floor((total / 1000) % 60);
+        let minutes = Math.floor((total / 1000 / 60) % 60);
+        let hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+        let days = Math.floor(total / (1000 * 60 * 60 * 24));
 
         return {
             total,
@@ -63,14 +63,14 @@ $(function () {
     }
 
     function initializeClock(id, endtime) {
-        const clock = document.querySelector('.offer__items');
+        let clock = document.querySelector('.counter');
         // const daysSpan = clock.querySelector('.promo__days');
-        const hoursSpan = clock.querySelector('.offer__item--hours');
-        const minutesSpan = clock.querySelector('.offer__item--minutes');
-        const secondsSpan = clock.querySelector('.offer__item--seconds');
+        let hoursSpan = clock.querySelector('.counter__item--hours');
+        let minutesSpan = clock.querySelector('.counter__item--minutes');
+        let secondsSpan = clock.querySelector('.counter__item--seconds');
 
         function updateClock() {
-            const t = getTimeRemaining(endtime);
+            let t = getTimeRemaining(endtime);
 
             // daysSpan.innerHTML = t.days;
             hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
@@ -83,11 +83,22 @@ $(function () {
         }
 
         updateClock();
-        const timeinterval = setInterval(updateClock, 1000);
+        let timeinterval = setInterval(updateClock, 1000);
     }
 
-    const deadline = $('.offer__items').attr('data-time');
-    initializeClock('offer__items', deadline);
+    let deadline = $('.counter').attr('data-time');
+    initializeClock('counter', deadline);
+
+    //Табы на странице товара
+    $('.product-tabs__link').on('click', function (e) {
+        e.preventDefault();
+        $('.product-tabs__link').removeClass('product-tabs__link--active');
+        $(this).addClass('product-tabs__link--active');
+
+        $('.product-tabs__content').removeClass('product-tabs__content--active');
+        $($(this).attr('href')).addClass('product-tabs__content--active');
+    });
+
 
     var mixer = mixitup('.mini-catalog__items');
     var mixer2 = mixitup('.catalog__items');

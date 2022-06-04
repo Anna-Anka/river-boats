@@ -44,8 +44,8 @@ input,
 button,
 textarea,
 select {
-	font: inherit;
     color: inherit;
+	font: inherit;
 }
 
 
@@ -61,6 +61,7 @@ address {
 button,
 input,
 textarea {
+    display: inline-block;
 	padding: 0;
     background-color: transparent;
 	border: 0;
